@@ -26,23 +26,38 @@ let counter = 0;
 
 const items = document.getElementsByClassName('item');
 items[counter].classList.remove('hide');
-console.log(items);
+//console.log(items);
+
 btnUP.addEventListener('click', function(){
 
-  items[counter].classList.add('hide');
-  console.log(items);
-  counter++;
 
-  items[counter].classList.remove('hide');
+  if(counter < (items.length - 1)){
+    items[counter].classList.add('hide');
+    counter++;
+    items[counter].classList.remove('hide');
+  }
+  else{
+    items[counter].classList.add('hide');
+    counter = 0;
+    items[counter].classList.remove('hide');
+  }
+
 
 });
 
+
+
 btnDW.addEventListener('click', function(){
 
-  items[counter].classList.add('hide');
-
-  counter--;
-
-  items[counter].classList.remove('hide');
+  if(counter > 0){
+    items[counter].classList.add('hide');
+    counter--;
+    items[counter].classList.remove('hide');
+  }
+  else{
+    items[counter].classList.add('hide');
+    counter = 4;
+    items[counter].classList.remove('hide');
+  }
 
 });

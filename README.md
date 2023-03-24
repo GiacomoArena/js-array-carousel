@@ -63,3 +63,41 @@ btnUP.addEventListener('click', function(){
 });
 ```
 .
+ 
+ - creare una condizione che al click 'up' dell'ultima img mi riporti alla prima immagine e invece al click 'down' della prima immagine mi riporti all'ultima creando una sorta di ciclo infinito
+ ```
+ btnUP.addEventListener('click', function(){
+
+
+  if(counter < (items.length - 1)){
+    items[counter].classList.add('hide');
+    counter++;
+    items[counter].classList.remove('hide');
+  }
+  else{
+    items[counter].classList.add('hide');
+    counter = 0;
+    items[counter].classList.remove('hide');
+  }
+
+
+});
+
+
+
+btnDW.addEventListener('click', function(){
+
+  if(counter > 0){
+    items[counter].classList.add('hide');
+    counter--;
+    items[counter].classList.remove('hide');
+  }
+  else{
+    items[counter].classList.add('hide');
+    counter = 4;
+    items[counter].classList.remove('hide');
+  }
+
+});
+ ```
+ .

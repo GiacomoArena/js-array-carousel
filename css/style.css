@@ -3,8 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-
+.none{
+  display: none;
+}
+.hide{
+  display: none;
+}
 .main-wrapper{
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.596);
@@ -24,6 +28,9 @@
   height: 100%;
   position: relative;
 }
+.img-wrapper{
+  height: 100%;
+}
 .slider img{
   width: 100%;
   height: 100%;
@@ -41,6 +48,11 @@
   transform: translateX(-50%);
   cursor: pointer;
 }
+.arrow:hover{
+  background-color: rgba(255, 255, 255, 0.836);
+  color: brown;
+}
+
 
 .arrow.up{
 top: 10px;
@@ -48,3 +60,4 @@ top: 10px;
 .arrow.down{
   bottom: 10px;
 }
+
